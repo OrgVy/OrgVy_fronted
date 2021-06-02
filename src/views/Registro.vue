@@ -112,7 +112,7 @@ export default {
           this.$router.push("/login");
         })
         .catch(() => {
-          this.$swal("Coloque otro correo, si no funciona, pues F por el server");
+          this.$swal("Coloque otro correo, si no funciona, contactenos ma10032013@gmail.com");
         });
     },
     onReset(event) {

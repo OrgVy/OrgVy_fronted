@@ -72,10 +72,10 @@ export default {
         })
         .then((res) => {
           if (res.data.isLogin){
-            this.$swal("Gracias por escogernos:3");
+            this.$swal("Gracias por escogernos :3, siga adelante.");
             this.$router.push("/bot");
           }else{
-            this.$swal("Wey o correo o contraseña pero algo anda mal :v");
+            this.$swal("Wey el correo o contraseña están mal (>-<).");
             this.onReset(null);
           }
           

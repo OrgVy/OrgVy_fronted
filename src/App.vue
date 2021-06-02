@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="{'background-image':'url(https://thumbs.dreamstime.com/z/fond-bleu-pastel-lumineux-de-couleur-utilisation-l-application-emballage-les-produits-sites-web-et-du-mat%C3%A9riel-illustration-168231031.jpg)'}">
     <div id="nav">
       <router-link to="/">Registro</router-link> |
       <router-link to="/login">Login</router-link>
