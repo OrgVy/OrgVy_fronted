@@ -24,13 +24,11 @@
             <b-button @click="addCategories()">Add category</b-button></b-col
           >
           <b-col>
-            <br/><b-button>Default Button</b-button></b-col>
-          <b-col>
             <b-form-input
               v-model="textType"
               placeholder="Add Type"
             ></b-form-input>
-            <b-button>Default Button </b-button></b-col
+            <b-button @click="addTypes()">Add type</b-button></b-col
           >
         </b-row>
       </b-col>
@@ -82,6 +80,17 @@ export default {
           this.$swal("algo salió mal, contactenos ma10032013@gmail.com");
         });
     },
+    addTypes(){
+      axios
+        .post(servers.orgvy_python + "/audiovisual/type/" + this.textType)
+        .then(() => {
+          this.$swal("adición completa :3");
+          this.traerTypes();
+        })
+        .catch(() => {
+          this.$swal("algo salió mal, contactenos ma10032013@gmail.com");
+        });
+    },
     traerCategories() {
       axios
         .get(servers.orgvy_python + "audiovisual/category")
@@ -93,7 +102,7 @@ export default {
           }
         })
         .catch(() => {
-          //this.$swal("Valió madres el login :v");
+          this.$swal("Error, algo inesperado pasó, contactenos ma10032013@gmail.com");
         });
     },
     traerTypes() {
@@ -107,7 +116,7 @@ export default {
           }
         })
         .catch(() => {
-          //this.$swal("Valió madres el login :v");
+          this.$swal("Error, algo inesperado pasó, contactenos ma10032013@gmail.com");
         });
     },
   },
